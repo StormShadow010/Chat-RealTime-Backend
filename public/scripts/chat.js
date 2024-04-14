@@ -16,7 +16,7 @@ Swal.fire({
 
 socket.on("messages", (messages) => {
     allMessages = messages
-    document.querySelector("#allMessages").innerHTML = messages.map(each => each).join("")
+    document.querySelector("#allMessages").innerHTML = messages.map(each => `<p>${each}</p>`).join("")
 })
 
 document.querySelector("#messageInput").addEventListener("keyup", event => {
